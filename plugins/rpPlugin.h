@@ -13,4 +13,24 @@ class rp:public plugin
 		int doTick();
 		int startupOptions(vector<string> args);
 };
+
+class rpActions
+{
+	public:
+		rpActions();
+		int roll(string rolls, string faces);
+		int roll(string rolls, string faces, string playerNum, const vector<string>);
+};
+
+class rpClass
+{
+	private:
+		string gametype;
+		vector<string> classNames;
+	public:
+		rpClass(string gametype);
+		void setClass(string name);
+		bool ClassExistence(string name);
+		int Clean(int type);
+};
 #endif
