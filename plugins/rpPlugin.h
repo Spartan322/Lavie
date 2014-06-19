@@ -26,23 +26,39 @@ class rpActions
 class rpClass
 {
 	private:
+		string name;
+}
+
+class rpClasses
+{
+	private:
 		string gametype;
-		vector<string> classNames;
+		vector<rpClass> classes;
 	public:
-		rpClass(string gametype);
-		void setClass(string name);
+		rpClasses(string gametype);
+		void setClass(rpClass classes);
 		bool ClassExistence(string name);
 		int Clean(int type);
+};
+
+class rpObject
+{
+	private:
+		string name;
+		
+	public:
 };
 
 class rpPlayer
 {
 	private:
 		string name;
-		bool invloved = false;
+		bool involved = false;
+		vector<string> inventory; //Or owned objects
 	public:
 		rpPlayer(string name);
-		togglePlay();
+		void togglePlay();
+		bool getInvolved();
 };
 
 class rpPlayers
@@ -52,6 +68,7 @@ class rpPlayers
 	public:
 		rpPlayers();
 		string ListPlayers(bool playing);
-		
+		rpPlayer GetPlayer(string name);
+		bool isPlaying(string name);
 };
 #endif
