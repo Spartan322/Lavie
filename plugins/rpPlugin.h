@@ -20,6 +20,7 @@ class rpActions
 		rpActions();
 		int roll(string rolls, string faces);
 		int roll(string rolls, string faces, string playerNum, const vector<string>);
+		
 };
 
 class rpClass
@@ -32,5 +33,25 @@ class rpClass
 		void setClass(string name);
 		bool ClassExistence(string name);
 		int Clean(int type);
+};
+
+class rpPlayer
+{
+	private:
+		string name;
+		bool invloved = false;
+	public:
+		rpPlayer(string name);
+		togglePlay();
+};
+
+class rpPlayers
+{
+	private:
+		vector<rpPlayer> players;
+	public:
+		rpPlayers();
+		string ListPlayers(bool playing);
+		
 };
 #endif
