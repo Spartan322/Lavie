@@ -18,7 +18,17 @@ namespace rpActions
 {
 	int roll(string rolls, string faces);
 	int roll(string rolls, string faces, string playerNum, const vector<string>);
-		
+};
+
+class rpRules
+{
+	private:
+		vector<string> rules;
+	public:
+		void setRules();
+		void addRule();
+		string getRules();
+		string getRule(int rnum);
 };
 
 class rpClass
