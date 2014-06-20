@@ -14,7 +14,7 @@ class rp:public plugin
 		int startupOptions(vector<string> args);
 };
 
-class rpActions
+namespace rpActions
 {
 	public:
 		rpActions();
