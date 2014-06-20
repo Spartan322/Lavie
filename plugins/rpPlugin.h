@@ -27,6 +27,12 @@ class rpClass
 {
 	private:
 		string name;
+		string info;
+	public:
+		rpClass(string name);
+		void setInfo(string info);
+		string getName();
+		string getInfo();
 }
 
 class rpClasses
@@ -45,8 +51,11 @@ class rpObject
 {
 	private:
 		string name;
-		
+		rpClass cla;
 	public:
+		rpObject(string name, rpClass cla);
+		string getName();
+		rpClass getClass();
 };
 
 class rpPlayer
@@ -54,10 +63,12 @@ class rpPlayer
 	private:
 		string name;
 		bool involved = false;
-		vector<string> inventory; //Or owned objects
+		vector<rpObject> inventory; //Or owned objects
 	public:
 		rpPlayer(string name);
 		void togglePlay();
+		string getName();
+		vector<string> getInventory();
 		bool getInvolved();
 };
 
