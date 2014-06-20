@@ -16,10 +16,8 @@ class rp:public plugin
 
 namespace rpActions
 {
-	public:
-		rpActions();
-		int roll(string rolls, string faces);
-		int roll(string rolls, string faces, string playerNum, const vector<string>);
+	int roll(string rolls, string faces);
+	int roll(string rolls, string faces, string playerNum, const vector<string>);
 		
 };
 
