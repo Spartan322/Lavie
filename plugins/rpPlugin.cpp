@@ -31,6 +31,12 @@ int rp::handleCommand(string nick, string channel, vector<string> words)
 			reply += text;
 			return 1;
 		}
+		if(words.at(0) == "rules")
+		{
+			string text;
+			text = "The Rules:\n"
+			text+= rpRules::GetRules();
+		}
 		/*End Roll Command*/
 		return 0;
 }
