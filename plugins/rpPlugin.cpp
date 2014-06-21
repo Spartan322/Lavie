@@ -32,6 +32,27 @@ int rp::handleCommand(string nick, string channel, vector<string> words)
 			return 1;
 		}
 		/*End Roll Command*/
+		return 0;
 }
 
-int rp
+int rp::handleMessage(string nick, string channel, vector<string> words)
+{
+	string reply = "";
+	if(words.find("rules") - words.find("are") <= 2 || stringsUtils::toLower(words.at(words.find("rules") - 3)) == "what")
+	{
+		reply = "The Rules:\n";
+		reply+= rpRules::GetRules();
+		return 1;
+	}
+	return 0;
+}
+
+int rp::doTick()
+{
+	return 0;
+}
+
+int rp::startupOptions(vector<string> args)
+{
+	return 0;
+}
