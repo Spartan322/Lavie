@@ -20,7 +20,7 @@ namespace rpActions
 	int roll(string rolls, string faces, string playerNum, const vector<string>);
 };
 
-class rpRules
+namespace rpRules
 {
 	private:
 		vector<string> rules;
